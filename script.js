@@ -44,21 +44,27 @@ function display(book) {
     // let author = document.createElement('p');
     // let pages = document.createElement('p');
     // let read = document.createElement('p');
+    let readBtn = document.createElement('button');
     let removeBtn = document.createElement('button');
 
     // title.textContent = book.title;
     // author.textContent = book.author;
     // pages.textContent = book.pages;
     // book.read ? read.textContent = 'Read' : read.textContent = 'Have not read';
+    readBtn.textContent = 'Toggle Read';
+    readBtn.className = 'read';
+    readBtn.addEventListener('click', toggleRead);
+    
     removeBtn.textContent = 'Remove';
     removeBtn.className = 'remove';
-    removeBtn.addEventListener('click', remove)
+    removeBtn.addEventListener('click', remove);
 
     // container.appendChild(title);
     // container.appendChild(author);
     // container.appendChild(pages);
     // container.appendChild(read);
     container.appendChild(info);
+    container.appendChild(readBtn);
     container.appendChild(removeBtn);
 
     return container;
@@ -89,6 +95,21 @@ function addBookToLibrary(book) {
 
     console.log(read.checked);
     console.log(myLibrary);
+}
+
+function toggleRead(e) {
+    let container = e.target.parentNode;
+    let index = container.querySelector('.index').textContent;
+    let toggle = container.querySelector('#read');
+
+    if (myLibrary[index-1].read) {
+        myLibrary[index-1].read = false;
+    } 
+    else {
+        myLibrary[index-1].read = true;
+    }
+
+    reload();
 }
 
 function remove(e) {
