@@ -1,0 +1,34 @@
+.container {
+    background-color:rgba(169, 169, 169, 0.377);
+    color: rgb(14, 22, 37);
+    
+    font-size: 14px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    gap: 10px;
+
+    width: 150px;
+    height: 150px;
+
+}
+
+.page {
+    background-color: cornsilk;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 10px;
+}
+
+p {
+    margin: 2px;
+}
+
+button, .remove {
+    margin-left: 20%;
+    margin-right: 20%;
+}
