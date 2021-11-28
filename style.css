@@ -1,21 +1,135 @@
-.container {
-    background-color:rgba(169, 169, 169, 0.377);
-    color: rgb(14, 22, 37);
-    
+.form {
+    font-family: 'Comfortaa', cursive;
+
+    display: grid;
+    grid-template-areas: "header header header"
+                         "title author pages"
+                         "read rating button";
+    grid-template-rows: 52px 36px 36px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+input[type='text'] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+}
+
+.form > .group > label {
+    float:left;
+}
+
+.form > .header {
+    background-color: lightblue;
+    grid-area: header;
+
+    padding-left: 5%;
+    padding-top: 5%;
+
+    margin-bottom: 24px;
+}
+
+.form > .header > h3 {
+    padding-left: 2%;
+    margin-top: -16px;
+
+    font-weight:700;
     font-size: 14px;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    gap: 10px;
+.form > .groupTitle {
+    grid-area: title;
+    margin-top: 20px;
+}
 
-    width: 150px;
-    height: 150px;
+.form > .groupAuthor {
+    grid-area: author;
+    margin-top: 20px;
+}
+.form > .groupPages {
+    grid-area: pages;
+    margin-top: 20px;
+}
+
+.form > .groupRead {
+    grid-area: read;
+} 
+
+.form > .groupRating {
+    grid-area: rating;
 
 }
 
+.form > .submit {
+    grid-area: button;
+    width: 125px;
+
+    font-family: 'Comfortaa', cursive;
+    background-color: lightblue;
+    border-radius: 4px;
+    border: none;
+
+}
+
+.groupPages > input {
+    width: 48px;
+    margin-left: 4px;
+}
+
+.container {
+    background-color:rgba(169, 169, 169, 0.377);
+    color: rgb(14, 22, 37);
+    border-radius: 8px;
+    
+
+    font-size: 14px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    display: grid;
+    grid-template-rows: 55% 35% 10%;
+    
+    gap: 0px;
+
+    max-width: 250px;
+    max-height: 250px;
+
+}
+
+.info {
+    font-size: 24px;
+    padding-left: 2%;
+    padding-top: 4%;
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 2px;
+}
+
+.info > .title {
+    overflow-x: scroll;
+}
+
+.info > .author {
+    overflow-x: scroll;
+    font-size: 16px;
+}
+
+.info > .pages, .read {
+    font-size: 16px;
+}
+
+.r {
+    padding: 2%;
+}
+
 .page {
+    margin-top: 20px;
+    
     background-color: cornsilk;
     
     display: grid;
@@ -25,10 +139,26 @@
 }
 
 p {
-    margin: 2px;
+    margin: 1%;
+    max-width: 225px;
+    max-height: 32px;
+
 }
 
-button, .remove {
-    margin-left: 20%;
-    margin-right: 20%;
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    max-width: 250px;
+
+}
+
+.removeBtn, .readBtn, .reviewBtn{
+    font-size: 80%;
+    font-family: 'Comfortaa', cursive;
+    background-color:lightblue;
+    border: 2px solid lightsteelblue;
+    border-radius: 8px;
 }

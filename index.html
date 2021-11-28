@@ -6,24 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Lora:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div>
-        <label class="title">Title: </label>
-        <input type="text" id="title">
-        <br>
-        <label class="author">Author: </label>
-        <input type="text" id="author">
-        <br>
-        <label class="pages">Pages:  </label>
-        <input type="number" id="pages">
-        <br>
-        <label class="read">Read Status: </label>
-        <input type="checkbox" id="read">
+        <div class="form">
+            <div class="header">
+                <h1>My Library</h1>
+                <h3>A small collection of personal favorites</h3>
+            </div>
+            <div class="groupTitle group">
+                <label for="title">Title: </label>
+                <input type="text" name= "title" id="title">
+            </div>
+            <div class="groupAuthor group">
+                <label for="author">Author: </label>
+                <input type="text" name= "author" id="author">
+            </div>  
+            <div class="groupPages group">
+                <label for="pages">Pages: </label>
+                <input type="number" name="pages" id="pages">
+            </div>  
+            <div class="groupRead group">
+                <label for="read">Read Status: </label>
+                <input type="checkbox" name="read" id="read">
+            </div>
+            <div class="groupRating group">
+                <label for="rating" class="rating">Rating: </label>
+                <input type="range" list="tickmarks" name="rating" id="rating" min="1" max="5">
+                <datalist id="tickmarks">
+                    <option value="1" label="1"></option>
+                    <option value="2" label="2"></option>
+                    <option value="3" label="3"></option>
+                    <option value="4" label="4"></option>
+                    <option value="5" label="5"></option>
+                </datalist>
+            </div>
+            <button class="submit">Submit</button>
+        </div>
+        <div class="page">
+            
+        </div>
 
-        <button class="submit">Submit</button>
-        
-        <div class="page"></div>
+    </div>
+
+    <div class="form-edit">
 
     </div>
     
